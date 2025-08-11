@@ -1,4 +1,5 @@
 <script setup>
+import AvatarContainer from './components/AvatarContainer.vue';
 </script>
 
 <template>
@@ -14,7 +15,6 @@
       position: relative;
       left: 0;
       top: 0;
-
     "
   >
     <div
@@ -34,7 +34,7 @@
       >
         <img
           style="height: 100%; margin-right: 10px"
-          src="@/assets/img/avatar2.jpg"
+          src="@/assets/img/avatar.jpg"
         />
         <div
           style="
@@ -71,6 +71,30 @@
       </div>
     </div>
   </div>
+  <div
+    class="mainContainer"
+    style="
+      width: 100%;
+      padding: 50px 40px 50px 40px;
+      display: flex;
+      justify-content: space-between;
+    "
+  >
+    <AvatarContainer></AvatarContainer>
+    <div
+      class="centerContainer"
+      style="
+        background-color: red;
+        width: 50%;
+        height: 1000px;
+        margin-right: 30px;
+      "
+    ></div>
+    <div
+      class="rightContainer"
+      style="background-color: greenyellow; width: 20%; height: 400px"
+    ></div>
+  </div>
 </template>
 
 <style scoped>
@@ -82,4 +106,10 @@
 .label:hover {
   color: #52c41a;
 }
+.layoutContainer,
+.layoutLeftContainer,
+.mainContainer {
+  box-sizing: border-box; /* 让 width 包含 padding 和 border */
+}
+
 </style>
