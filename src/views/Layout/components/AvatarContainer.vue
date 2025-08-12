@@ -13,10 +13,6 @@ const isHover3 = ref(false);
 </script>
 
 <template>
-  <div
-      class="leftContainer"
-      style="width: 20%; height: 400px; margin-right: 30px;flex:0 0 300px"
-    >
       <div
         class="avatarContainer"
         style="
@@ -152,7 +148,7 @@ const isHover3 = ref(false);
           </a>
         </div>
       </div>
-    </div>
+   
 </template>
 <style scoped>
 .digitalItem {
