@@ -58,6 +58,7 @@ const isHover3 = ref(false);
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 17px;
           "
         >
           一位前端学习者

@@ -1,5 +1,9 @@
 <script setup>
 import AvatarContainer from "./components/AvatarContainer.vue";
+import CategoryContainer from "./components/CategoryContainer.vue";
+import LabelContainer from "./components/LabelContainer.vue";
+import recentArticlesContainer from "./components/recentArticlesContainer.vue";
+import ArchiveContainer from "./components/ArchiveContainer.vue";
 </script>
 
 <template>
@@ -21,12 +25,27 @@ import AvatarContainer from "./components/AvatarContainer.vue";
     </div>
   </div>
   <div class="mainContainer">
-    <div class="leftContainer">
-      <AvatarContainer></AvatarContainer>
+    <div class="leftContainerWrapper">
+      <div class="leftContainer">
+        <AvatarContainer></AvatarContainer>
+      </div>
+      <div class="CategoryContainer">
+        <CategoryContainer></CategoryContainer>
+      </div>
+      <div class="labelContainer1">
+        <LabelContainer></LabelContainer>
+      </div>
     </div>
 
     <router-view></router-view>
-    <div class="rightContainer"></div>
+    <div class="rightContainer">
+      <div class="recentArticlesContainer">
+        <recentArticlesContainer></recentArticlesContainer>
+      </div>
+      <div class="archiveContainer">
+        <ArchiveContainer></ArchiveContainer>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -93,10 +112,14 @@ import AvatarContainer from "./components/AvatarContainer.vue";
     align-items: center;
   }
   .leftContainer {
-    width: 20%;
-    height: 400px;
-    margin-right: 30px;
-    flex: 0 0 300px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .leftContainerActive {
+    position: fixed;
+    left: 40px; /* 与 mainContainer 的 padding-left 一致 */
+    top: 60px; /* 与 layoutContainer 的高度一致 */
+    width: 300px; /* 固定宽度 */
   }
   .mainContainer {
     width: 100%;
@@ -106,10 +129,17 @@ import AvatarContainer from "./components/AvatarContainer.vue";
     gap: 40px;
   }
   .rightContainer {
-    background-color: greenyellow;
-    width: 20%;
-    height: 400px;
-    flex: 0 0 300px;
+    flex: 0 0 340px;
+  }
+  .leftContainerWrapper {
+    flex: 0 0 300px; /* 保持固定宽度 */
+    margin-right: 30px;
+  }
+  .recentArticlesContainer {
+    width: 100%;
+  }
+  .archiveContainer {
+    width: 100%;
   }
 }
 /* 平板（横屏）或小屏笔记本 */
