@@ -51,7 +51,7 @@ import AvatarContainer from './components/AvatarContainer.vue';
       </router-link>
       <div
         class="mainContainer"
-        style="display: flex; justify-content: center; align-items: center"
+        style="display: flex; justify-content: center; align-items: center;"
       >
         <router-link style="text-decoration: none" class="label"
           >首页</router-link
@@ -78,21 +78,14 @@ import AvatarContainer from './components/AvatarContainer.vue';
       padding: 50px 40px 50px 40px;
       display: flex;
       justify-content: space-between;
+      gap: 40px;
     "
   >
     <AvatarContainer></AvatarContainer>
-    <div
-      class="centerContainer"
-      style="
-        background-color: red;
-        width: 50%;
-        height: 1000px;
-        margin-right: 30px;
-      "
-    ></div>
+    <router-view></router-view>
     <div
       class="rightContainer"
-      style="background-color: greenyellow; width: 20%; height: 400px"
+      style="background-color: greenyellow; width: 20%; height: 400px;flex:0 0 300px"
     ></div>
   </div>
 </template>

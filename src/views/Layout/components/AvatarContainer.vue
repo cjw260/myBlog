@@ -15,7 +15,7 @@ const isHover3 = ref(false);
 <template>
   <div
       class="leftContainer"
-      style="width: 20%; height: 400px; margin-right: 30px"
+      style="width: 20%; height: 400px; margin-right: 30px;flex:0 0 300px"
     >
       <div
         class="avatarContainer"
