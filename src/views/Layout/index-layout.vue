@@ -2,8 +2,10 @@
 import AvatarContainer from "./components/AvatarContainer.vue";
 import CategoryContainer from "./components/CategoryContainer.vue";
 import LabelContainer from "./components/LabelContainer.vue";
-import recentArticlesContainer from "./components/recentArticlesContainer.vue";
+import RecentArticlesContainer from "./components/RecentArticlesContainer.vue";
 import ArchiveContainer from "./components/ArchiveContainer.vue";
+import { useScroll } from "@vueuse/core"; //导入监控滚动组件
+const { y } = useScroll(window); //仅监控窗口y轴上的移动
 </script>
 
 <template>
@@ -29,24 +31,24 @@ import ArchiveContainer from "./components/ArchiveContainer.vue";
       <div class="leftContainer">
         <AvatarContainer></AvatarContainer>
       </div>
-      <div class="CategoryContainer">
+      <div :class="{leftContainerActive1: y > 450}" class="CategoryContainer">
         <CategoryContainer></CategoryContainer>
       </div>
-      <div class="labelContainer1">
+      <div :class="{leftContainerActive2: y > 450}" class="labelContainer1">
         <LabelContainer></LabelContainer>
       </div>
     </div>
-
     <router-view></router-view>
-    <div class="rightContainer">
-      <div class="recentArticlesContainer">
-        <recentArticlesContainer></recentArticlesContainer>
+    <div  class="rightContainer">
+      <div :class="{rightContainerActive1: y > 90}" class="recentArticlesContainer">
+        <RecentArticlesContainer></RecentArticlesContainer>
       </div>
-      <div class="archiveContainer">
+      <div :class="{rightContainerActive2: y > 90}" class="archiveContainer">
         <ArchiveContainer></ArchiveContainer>
       </div>
     </div>
   </div>
+  
 </template>
 
 <style scoped>
@@ -115,11 +117,27 @@ import ArchiveContainer from "./components/ArchiveContainer.vue";
     width: 100%;
     margin-bottom: 20px;
   }
-  .leftContainerActive {
+  .leftContainerActive1 {
     position: fixed;
     left: 40px; /* 与 mainContainer 的 padding-left 一致 */
-    top: 60px; /* 与 layoutContainer 的高度一致 */
+    top: 20px; /* 与 layoutContainer 的高度一致 */
     width: 300px; /* 固定宽度 */
+  }.leftContainerActive2 {
+    position: fixed;
+    left: 40px; /* 与 mainContainer 的 padding-left 一致 */
+    top: 325px; /* 与 layoutContainer 的高度一致 */
+    width: 300px; /* 固定宽度 */
+  }
+  .rightContainerActive1 {
+    position: fixed;
+    right: 40px; /* 与 mainContainer 的 padding-left 一致 */
+    top: 20px; /* 与 layoutContainer 的高度一致 */
+    width: 340px; /* 固定宽度 */
+  }.rightContainerActive2 {
+    position: fixed;
+    right: 40px; /* 与 mainContainer 的 padding-left 一致 */
+    top: 373px; /* 与 layoutContainer 的高度一致 */
+    width: 340px; /* 固定宽度 */
   }
   .mainContainer {
     width: 100%;
@@ -136,14 +154,17 @@ import ArchiveContainer from "./components/ArchiveContainer.vue";
     margin-right: 30px;
   }
   .recentArticlesContainer {
-    width: 100%;
+    flex: 0 0 340px;
   }
   .archiveContainer {
-    width: 100%;
+    flex: 0 0 340px;
   }
 }
 /* 平板（横屏）或小屏笔记本 */
 @media (min-width: 901px) and (max-width: 1199px) {
+  .leftContainerWrapper {
+    display: none;
+  }
   .label {
     color: #475b6d;
     font-size: 17px;
@@ -227,6 +248,9 @@ import ArchiveContainer from "./components/ArchiveContainer.vue";
 }
 /* 平板（竖屏） */
 @media (min-width: 601px) and (max-width: 900px) {
+  .leftContainerWrapper {
+    display: none;
+  }
   .label {
     color: #475b6d;
     font-size: 17px;
@@ -314,6 +338,9 @@ import ArchiveContainer from "./components/ArchiveContainer.vue";
 }
 /* 移动端（手机） */
 @media (max-width: 600px) {
+  .leftContainerWrapper {
+    display: none;
+  }
   .label {
     color: #475b6d;
     font-size: 17px;
