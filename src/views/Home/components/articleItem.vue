@@ -1,26 +1,39 @@
 <script setup>
+defineProps({
+  item: {
+    type: Object,
+    default: () => {},
+  },
+});
 </script>
 
 
 <template>
   <div class="itemContainer">
-    <div class="titleContainer">我是标题</div>
-    <div class="description">我是描述</div>
+    <router-link class="link" :to="`article/${item.id}`"
+      ><div class="titleContainer">{{ item.title }}</div></router-link
+    >
+    <div class="description">{{ item.content }}</div>
     <div class="time">
       <div class="timeLeft">
         <img
           style="height: 16px; margin-right: 5px"
           src="@/assets/img/time.png"
-        />2025.8.12 &sdot; 其他
+        />{{ item.id.replace(/^(\d{4})(\d{2})(\d{2}).*/, "$1.$2.$3") }} &sdot;
+        其他
       </div>
-      <div class="timeRight">继续阅读</div>
+      <router-link class="link" :to="`article/${item.id}`">
+        <div class="timeRight">继续阅读</div>
+      </router-link>
     </div>
   </div>
-  
 </template>
 
 
 <style scoped>
+.link {
+  text-decoration: none;
+}
 .itemContainer {
   width: 100%;
   height: 141px;
@@ -59,7 +72,7 @@
   color: #475b6d;
 }
 .timeRight {
-  color: #5188E1;
+  color: #5188e1;
   font-size: 17px;
 }
 </style>

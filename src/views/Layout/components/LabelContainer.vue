@@ -1,20 +1,6 @@
 <script setup>
-import { ref } from "vue";
-
-const labelList = ref([
-  { name: "js" },
-  { name: "css" },
-  { name: "ts" },
-  { name: "node" },
-  { name: "express" },
-  { name: "html" },
-  { name: "vue" },
-  { name: "react" },
-  { name: "sql" },
-  { name: "spring" },
-  { name: "arco" },
-  { name: "elementPlus" },
-]);
+import {useAllDataStore} from "@/stores/allData"
+const allDataStore = useAllDataStore()
 </script>
 
 
@@ -30,8 +16,8 @@ const labelList = ref([
     <div class="labelMainContainer">
       <div
         style="margin-right: 5px; margin-bottom: 5px"
-        v-for="item in labelList"
-        :key="item"
+        v-for="item in allDataStore.tagList"
+        :key="item.name"
       >
         <a-tag checkable>{{ item.name }}</a-tag>
       </div>

@@ -1,13 +1,9 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted } from "vue";
 import CategoryItem from "./CategoryItem.vue";
-const articlesList =
-  ref([
-    { name: 2022, num: 22 },
-    { name: 2023, num: 56 },
-    { name: 2024, num: 94 },
-    { name: 2025, num: 122 }
-  ]);
+import { useAllDataStore } from "@/stores/allData";
+const allDataStore = useAllDataStore();
+onMounted(() => {console.log(allDataStore.timeList)})
 </script>
 
 
@@ -22,7 +18,11 @@ const articlesList =
     </div>
 
     <div class="archiveItemContainer">
-      <div style="width: 100%;" v-for="item in articlesList" :key="item.name">
+      <div
+        style="width: 100%"
+        v-for="item in allDataStore.timeList"
+        :key="item.name"
+      >
         <CategoryItem :category="item"></CategoryItem>
       </div>
     </div>

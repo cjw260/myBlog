@@ -1,13 +1,7 @@
 <script setup>
 import CategoryItem from "./CategoryItem.vue";
-import { ref } from "vue";
-const categoryList = ref([
-  { name: "技术文章", num: 339 },
-  { name: "旅游", num: 39 },
-  { name: "其他", num: 22 },
-  { name: "阅读", num: 29 },
-  { name: "考试", num: 11 },
-]);
+import { useAllDataStore } from "@/stores/allData";
+const allDataStore = useAllDataStore()
 </script>
 
 
@@ -20,7 +14,7 @@ const categoryList = ref([
       />
       分类
     </div>
-    <div style="width: 100%" v-for="item in categoryList" :key="item">
+    <div style="width: 100%" v-for="item in allDataStore.categoryList" :key="item.name">
       <CategoryItem :category="item"></CategoryItem>
     </div>
   </div>
