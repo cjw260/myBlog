@@ -1,9 +1,7 @@
 <script setup>
-import { onMounted } from "vue";
 import CategoryItem from "./CategoryItem.vue";
 import { useAllDataStore } from "@/stores/allData";
 const allDataStore = useAllDataStore();
-onMounted(() => {console.log(allDataStore.timeList)})
 </script>
 
 
