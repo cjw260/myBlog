@@ -1,6 +1,6 @@
 <script setup>
-import {useAllDataStore} from "@/stores/allData"
-const allDataStore = useAllDataStore()
+import { useAllDataStore } from "@/stores/allData";
+const allDataStore = useAllDataStore();
 </script>
 
 
@@ -19,7 +19,9 @@ const allDataStore = useAllDataStore()
         v-for="item in allDataStore.tagList"
         :key="item.name"
       >
-        <a-tag checkable>{{ item.name }}</a-tag>
+        <router-link :to="`/tags/${item.name}`"
+          ><a-tag checkable>{{ item.name }}</a-tag></router-link
+        >
       </div>
     </div>
   </div>

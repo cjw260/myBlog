@@ -9,12 +9,10 @@ defineProps({
 
 
 <template>
-  <router-link style="text-decoration: none" to="path">
     <div class="categoryItem">
       {{ category.name }}
       <a-tag>{{ category.num }}</a-tag>
     </div>
-  </router-link>
 </template>
 <style scoped>
 .categoryItem {

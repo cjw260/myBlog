@@ -22,7 +22,7 @@ defineProps({
         />{{ item.id.replace(/^(\d{4})(\d{2})(\d{2}).*/, "$1.$2.$3") }} &sdot;
         其他
       </div>
-      <router-link class="link" :to="`article/${item.id}`">
+      <router-link class="link" :to="`/article/${item.id}`">
         <div class="timeRight">继续阅读</div>
       </router-link>
     </div>

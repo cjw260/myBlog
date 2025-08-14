@@ -1,4 +1,7 @@
 <script setup>
+import { useAllDataStore } from '@/stores/allData';
+const allDataStore = useAllDataStore()
+
 </script>
 
 
@@ -12,29 +15,10 @@
       最近文章
     </div>
 
-    <div class="articlesItemContainer">
-      <div class="articlesTime">2025-08-12</div>
-      <router-link style="text-decoration: none; width: 95%" to="path">
-        <div class="articlesTitle">我是标题</div>
-      </router-link>
-    </div>
-    <div class="articlesItemContainer">
-      <div class="articlesTime">2025-08-12</div>
-      <router-link style="text-decoration: none; width: 95%" to="path">
-        <div class="articlesTitle">我是标题</div>
-      </router-link>
-    </div>
-    <div class="articlesItemContainer">
-      <div class="articlesTime">2025-08-12</div>
-      <router-link style="text-decoration: none; width: 95%" to="path">
-        <div class="articlesTitle">我是标题</div>
-      </router-link>
-    </div>
-    
-    <div class="articlesItemContainer">
-      <div class="articlesTime">2025-08-12</div>
-      <router-link style="text-decoration: none; width: 95%" to="path">
-        <div class="articlesTitle">我是标题</div>
+    <div class="articlesItemContainer" v-for="item in allDataStore.articleList.slice(-4).reverse()" :key="item.id">
+      <div class="articlesTime">{{ item.id.replace(/^(\d{4})(\d{2})(\d{2}).*/, "$1.$2.$3") }}</div>
+      <router-link style="text-decoration: none; width: 95%" :to="`article/${item.id}`">
+        <div class="articlesTitle">{{ item.title }}</div>
       </router-link>
     </div>
 

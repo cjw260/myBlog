@@ -1,7 +1,7 @@
 <script setup>
 import CategoryItem from "./CategoryItem.vue";
 import { useAllDataStore } from "@/stores/allData";
-const allDataStore = useAllDataStore()
+const allDataStore = useAllDataStore();
 </script>
 
 
@@ -14,8 +14,24 @@ const allDataStore = useAllDataStore()
       />
       分类
     </div>
-    <div style="width: 100%" v-for="item in allDataStore.categoryList" :key="item.name">
-      <CategoryItem :category="item"></CategoryItem>
+    <div
+      style="width: 100%"
+      v-for="item in allDataStore.categoryList"
+      :key="item.name"
+    >
+      <router-link
+        style="
+          text-decoration: none;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+        :to="`categories/${item.name}`"
+        ><CategoryItem :category="item"></CategoryItem
+      ></router-link>
     </div>
   </div>
 </template>

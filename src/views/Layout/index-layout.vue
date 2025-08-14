@@ -16,9 +16,9 @@ const { y } = useScroll(window); //仅监控窗口y轴上的移动
         <div class="myNameText">Cain的个人网站</div>
       </router-link>
       <div class="labelMainContainer">
-        <router-link class="label">首页</router-link>
-        <router-link class="label">标签</router-link>
-        <router-link class="label">分类</router-link>
+        <router-link to="/" class="label">首页</router-link>
+        <router-link to="/tags" class="label">标签</router-link>
+        <router-link to="/categories" class="label">分类</router-link>
         <router-link class="label">关于</router-link>
       </div>
       <div class="search">
