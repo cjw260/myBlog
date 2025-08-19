@@ -95,4 +95,13 @@ const allDataStore = useAllDataStore();
 .categoriesItem:hover {
   background-color: #f2f5f8;
 }
+@media (max-width: 600px) {
+  .categoriesItem{
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  .mainContainer{
+    justify-content: center;
+  }
+}
 </style>

@@ -9,7 +9,7 @@ const allDataStore = useAllDataStore();
     <div class="labelItemText">
       <img
         style="width: 20px; margin-right: 5px"
-        src="@/assets/img/label.png"
+        src="https://i.mji.rip/2025/08/15/bc2851594ad9049d3c9c16f330df23ad.png"
       />
       热门标签
     </div>

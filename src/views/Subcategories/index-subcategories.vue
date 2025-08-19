@@ -13,7 +13,7 @@ const allDataStore = useAllDataStore();
     class="centerContainerNone"
     v-if="allDataStore.categorySearch(route.params.name).length === 0"
   >
-    <div><img style="width: 50px" src="@/assets/img/none.png" /></div>
+    <div><img style="width: 50px" src="https://i.mij.rip/2025/08/15/a1c082d0158f59b4c70489ed54397dd4.png" /></div>
     <router-link style="text-decoration: none" to="/"
       ><div style="color: #475b6d; font-size: 18px">
         暂时没有内容哦！点这里去看看别的吧~

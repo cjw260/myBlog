@@ -1,11 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import avatarImg1 from "@/assets/img/bilibili.png";
-import avatarHoverImg1 from "@/assets/img/bilibiliActive.png";
-import avatarHoverImg2 from "@/assets/img/giteeActive.png";
-import avatarImg2 from "@/assets/img/gitee.png";
-import avatarImg3 from "@/assets/img/github.png";
-import avatarHoverImg3 from "@/assets/img/githubActive.png";
 import { useAllDataStore } from "@/stores/allData";
 const allDataStore = useAllDataStore();
 const isHover1 = ref(false);
@@ -36,7 +30,10 @@ const isHover3 = ref(false);
         align-items: center;
       "
     >
-      <img style="height: 100%" src="@/assets/img/avatar.jpg" />
+      <img
+        style="height: 100%"
+        src="https://i.mji.rip/2025/08/15/ccf98ec484201675d1586fa7a840688f.jpeg"
+      />
     </div>
     <div
       style="
@@ -106,7 +103,7 @@ const isHover3 = ref(false);
       >
         <img
           style="height: 20px; width: 20px"
-          :src="isHover1 ? avatarHoverImg1 : avatarImg1"
+          :src="isHover1 ? `https://i.mji.rip/2025/08/15/189cbd6c77685b0737cdd66bed2e8235.png` : `https://i.mji.rip/2025/08/15/dd8ece6cc679f4ce5909aaae50893f78.png`"
         /> </a
       ><a
         style="
@@ -124,7 +121,7 @@ const isHover3 = ref(false);
       >
         <img
           style="height: 20px; width: 20px"
-          :src="isHover2 ? avatarHoverImg2 : avatarImg2"
+          :src="isHover2 ? `https://i.mji.rip/2025/08/15/5edde4f42250fd7eb01f1f345ef4a010.png` : `https://i.mji.rip/2025/08/15/8677f09f87a3a0adcda46054c51650e6.png`"
         /> </a
       ><a
         style="
@@ -140,7 +137,7 @@ const isHover3 = ref(false);
       >
         <img
           style="height: 20px; width: 20px"
-          :src="isHover3 ? avatarHoverImg3 : avatarImg3"
+          :src="isHover3 ? `https://i.mji.rip/2025/08/15/bda0934c46306263917ded0c85863357.png` : `https://i.mji.rip/2025/08/15/46c93a945a0cf95c70d82c0a48f38dda.png`"
         />
       </a>
     </div>

@@ -14,6 +14,14 @@ export const useAllDataStore = defineStore('allData', () => {
       name: "markdown"
     }, {
       name: "git"
+    },
+    {
+      name: "webpack"
+    },
+    {
+      name: "vite"
+    },{
+      name: "面试"
     }
   ])
   //文章列表
@@ -53,84 +61,26 @@ export const useAllDataStore = defineStore('allData', () => {
       time: "2025",
       content: "git的基本使用语法",
     }, {
-      id: "2025081501",
-      title: "Python 数据分析入门",
-      category: "数据科学",
-      tags: "python, pandas",
-      time: "2025-08-15",
-      content: "使用Python和Pandas进行基础数据分析的教程。"
-    },
-    {
-      id: "2025081502",
-      title: "Docker 容器化部署实战",
-      category: "DevOps",
-      tags: "docker, 部署",
-      time: "2025-08-15",
-      content: "手把手教你使用Docker容器化部署Web应用。"
-    },
-    {
       id: "2025081601",
-      title: "JavaScript ES2025 新特性预览",
-      category: "前端开发",
-      tags: "javascript, ecmascript",
-      time: "2025-08-16",
-      content: "即将发布的JavaScript新特性前瞻。"
-    },
-    {
-      id: "2025081602",
-      title: "RESTful API 设计原则",
-      category: "后端开发",
-      tags: "api, 架构",
-      time: "2025-08-16",
-      content: "遵循这些原则设计出优雅的RESTful API接口。"
-    },
-    {
-      id: "2025081701",
-      title: "微前端架构实践",
-      category: "前端架构",
-      tags: "微前端, qiankun",
-      time: "2025-08-17",
-      content: "大型前端项目采用微前端架构的实践经验分享。"
-    },
-    {
-      id: "2025081702",
-      title: "Node.js 性能优化技巧",
-      category: "后端开发",
-      tags: "nodejs, 性能优化",
-      time: "2025-08-17",
-      content: "提升Node.js应用性能的10个实用技巧。"
-    },
-    {
+      title: "webpack的基本使用",
+      category: "技术文章",
+      tags: "webpack",
+      time: "2025",
+      content: "如题",
+    }, {
       id: "2025081801",
-      title: "Webpack 配置完全指南",
-      category: "前端工程化",
-      tags: "webpack, 构建工具",
-      time: "2025-08-18",
-      content: "从入门到精通Webpack的各种配置选项。"
-    },
-    {
-      id: "2025081802",
-      title: "CSS Grid 布局实战",
-      category: "前端开发",
-      tags: "css, 布局",
-      time: "2025-08-18",
-      content: "使用CSS Grid创建复杂响应式布局的完整教程。"
-    },
-    {
+      title: "vite的基本使用",
+      category: "技术文章",
+      tags: "vite",
+      time: "2025",
+      content: "如题",
+    },{
       id: "2025081901",
-      title: "GraphQL 与 REST 对比分析",
-      category: "API设计",
-      tags: "graphql, rest",
-      time: "2025-08-19",
-      content: "两种API设计风格的优缺点比较和使用场景分析。"
-    },
-    {
-      id: "2025081902",
-      title: "前端安全最佳实践",
-      category: "Web安全",
-      tags: "安全, xss, csrf",
-      time: "2025-08-19",
-      content: "保护前端应用免受常见攻击的安全措施。"
+      title: "文件上传及文件相关操作",
+      category: "面试",
+      tags: "面试",
+      time: "2025",
+      content: "如题",
     }
   ])
   //分类数组
@@ -145,9 +95,9 @@ export const useAllDataStore = defineStore('allData', () => {
       return articleList.value.filter(article => article.category === "生活随笔").length
     })
   }, {
-    name: "游戏笔记",
+    name: "面试",
     num: computed(() => {
-      return articleList.value.filter(article => article.category === "游戏笔记").length
+      return articleList.value.filter(article => article.category === "面试").length
     })
   }, {
     name: "前端开发",

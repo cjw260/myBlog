@@ -11,15 +11,14 @@ const { y } = useScroll(window); //仅监控窗口y轴上的移动
 <template>
   <div class="layoutContainer">
     <div class="layoutLeftContainer">
-      <router-link class="avatarContainer">
-        <img class="img1" src="@/assets/img/avatar.jpg" />
+      <div  class="avatarContainer">
+        <img class="img1" src="https://i.mji.rip/2025/08/15/ccf98ec484201675d1586fa7a840688f.jpeg" />
         <div class="myNameText">Cain的个人网站</div>
-      </router-link>
+      </div>
       <div class="labelMainContainer">
         <router-link to="/" class="label">首页</router-link>
         <router-link to="/tags" class="label">标签</router-link>
         <router-link to="/categories" class="label">分类</router-link>
-        <router-link class="label">关于</router-link>
       </div>
       <div class="search">
         <a-input-search placeholder="搜索" />
@@ -110,7 +109,7 @@ const { y } = useScroll(window); //仅监控窗口y轴上的移动
     align-items: center;
   }
   .search {
-    display: flex;
+    display: none;
     align-items: center;
   }
   .leftContainer {
@@ -413,7 +412,7 @@ const { y } = useScroll(window); //仅监控窗口y轴上的移动
   }
   .mainContainer {
     width: 100%;
-    padding: 50px 40px 50px 40px;
+    padding: 20px 10px 20px 10px;
     display: flex;
     justify-content: space-between;
     gap: 40px;

@@ -10,7 +10,7 @@ const allDataStore = useAllDataStore();
     <div class="categoryItemText">
       <img
         style="width: 20px; margin-right: 5px"
-        src="@/assets/img/category.png"
+        src="https://i.mji.rip/2025/08/15/849da7c0d9b518dc3efef72a7a01b43f.png"
       />
       分类
     </div>

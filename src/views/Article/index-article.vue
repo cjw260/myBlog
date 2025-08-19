@@ -6,7 +6,7 @@ const route = useRoute()
 
 <template>
   <div class="centerContainer">
-    <MarkdownViewer :src="`/markdown/${route.params.id}.md`"></MarkdownViewer>
+    <MarkdownViewer :src="`/blog/markdown/${route.params.id}.md`"></MarkdownViewer>
   </div>
 </template>
 

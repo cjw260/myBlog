@@ -10,7 +10,7 @@ const allDataStore = useAllDataStore();
     <div class="archiveItemText">
       <img
         style="width: 20px; margin-right: 5px"
-        src="@/assets/img/archive.png"
+        src="https://i.mij.rip/2025/08/15/08eaee60ac2e34b589655640b15a75b0.png"
       />
       归档
     </div>

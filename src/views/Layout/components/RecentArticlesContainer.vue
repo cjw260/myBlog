@@ -10,7 +10,7 @@ const allDataStore = useAllDataStore()
     <div class="recentArticlesItemText">
       <img
         style="width: 20px; margin-right: 5px"
-        src="@/assets/img/articles.png"
+        src="https://i.mij.rip/2025/08/15/25a82761fdb059fd8ee199d286d476fe.png"
       />
       最近文章
     </div>

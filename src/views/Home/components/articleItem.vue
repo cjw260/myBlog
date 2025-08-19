@@ -10,7 +10,7 @@ defineProps({
 
 <template>
   <div class="itemContainer">
-    <router-link class="link" :to="`article/${item.id}`"
+    <router-link class="link" :to="`/article/${item.id}`"
       ><div class="titleContainer">{{ item.title }}</div></router-link
     >
     <div class="description">{{ item.content }}</div>
@@ -18,7 +18,7 @@ defineProps({
       <div class="timeLeft">
         <img
           style="height: 16px; margin-right: 5px"
-          src="@/assets/img/time.png"
+          src="https://i.mij.rip/2025/08/15/3efe00b70b2fe0609089fe30bfceecf4.png"
         />{{ item.id.replace(/^(\d{4})(\d{2})(\d{2}).*/, "$1.$2.$3") }} &sdot;
         其他
       </div>
