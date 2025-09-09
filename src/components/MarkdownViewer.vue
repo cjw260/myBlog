@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="loading"><a-spin /></div>
+    <div v-if="loading" style="display: flex;align-items: center;justify-content: center;"><a-spin /></div>
     <div v-else class="markdown-body" v-html="renderedMarkdown"></div>
   </div>
 </template>
@@ -50,7 +50,6 @@ onMounted(loadMarkdown);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
   font-size: 1.1rem;
   line-height: 1.8;
   /* 可选：让图片不会溢出 */

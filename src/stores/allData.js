@@ -22,31 +22,12 @@ export const useAllDataStore = defineStore('allData', () => {
       name: "vite"
     },{
       name: "面试"
+    },{
+      name: "React"
     }
   ])
   //文章列表
   const articleList = ref([{
-      id: "2025081301",
-      title: "第一个示例",
-      category: "前端开发",
-      tags: "vue",
-      time: "2025",
-      content: "Vue3的Composition API是一个新的API，它允许我们以函数的形式组织组件逻辑。",
-    }, {
-      id: "2025081302",
-      title: "第二个示例",
-      category: "前端开发",
-      tags: "vue",
-      time: "2025",
-      content: "Vue3的Composition API是一个新的API，它允许我们以函数的形式组织组件逻辑。",
-    }, {
-      id: "2025081303",
-      title: "第三个示例",
-      category: "前端开发",
-      tags: "vue",
-      time: "2025",
-      content: "Vue3的Composition API是一个新的API，它允许我们以函数的形式组织组件逻辑。",
-    }, {
       id: "2025081401",
       title: "关于markdown基础语法",
       category: "技术文章",
@@ -79,6 +60,27 @@ export const useAllDataStore = defineStore('allData', () => {
       title: "文件上传及文件相关操作",
       category: "面试",
       tags: "面试",
+      time: "2025",
+      content: "如题",
+    },{
+      id: "2025082101",
+      title: "React核心语法",
+      category: "技术文章",
+      tags: "React",
+      time: "2025",
+      content: "如题",
+    },{
+      id: "2025082401",
+      title: "react中的常用hook",
+      category: "技术文章",
+      tags: "React",
+      time: "2025",
+      content: "如题",
+    },{
+      id: "2025082402",
+      title: "hook的闭包陷阱的成因和解决方案",
+      category: "技术文章",
+      tags: "React",
       time: "2025",
       content: "如题",
     }
